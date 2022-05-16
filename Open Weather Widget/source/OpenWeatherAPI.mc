@@ -19,8 +19,7 @@ function makeOWMwebRequest(callBack) {
 	var apiKey = App.Properties.getValue("api_key");
 	if (apiKey == null || apiKey.length() == 0) {
 		// Put your own apiKey here
-		// apiKey = "50b8e00502c942058668ba907d1610da"; 和风
-		apiKey = "a361e4c29b06bb2ffd85f8f9ae340f5d";
+		apiKey = "";
 	}
 	
 	// Location
