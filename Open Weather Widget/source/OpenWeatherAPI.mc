@@ -13,13 +13,14 @@ function makeOWMwebRequest(callBack) {
 		:method => Comms.HTTP_REQUEST_METHOD_GET,
 		:headers => {"Content-Type" => Comms.REQUEST_CONTENT_TYPE_URL_ENCODED},
 		:responseType => Comms.HTTP_RESPONSE_CONTENT_TYPE_JSON
-	};
+	};	
 	
 	// API key
 	var apiKey = App.Properties.getValue("api_key");
 	if (apiKey == null || apiKey.length() == 0) {
 		// Put your own apiKey here
-		apiKey = "";
+		// apiKey = "50b8e00502c942058668ba907d1610da"; 和风
+		apiKey = "a361e4c29b06bb2ffd85f8f9ae340f5d";
 	}
 	
 	// Location
@@ -37,7 +38,9 @@ function makeOWMwebRequest(callBack) {
 			Sys.LANGUAGE_POL => "pl",
 			Sys.LANGUAGE_NOB => "no",
 			Sys.LANGUAGE_DUT => "nl",
-			Sys.LANGUAGE_DEU => "de"
+			Sys.LANGUAGE_DEU => "de",
+			Sys.LANGUAGE_CHS => "zh_cn",
+			Sys.LANGUAGE_CHT => "zh_tw"
 			};
 			
 		lang = langDictionary.get(Sys.getDeviceSettings().systemLanguage);
@@ -56,8 +59,8 @@ function makeOWMwebRequest(callBack) {
 }
 
 (:background)
-function onReceiveOpenWeatherMapBackground(responseCode, data) {
-	//$.p("onReceiveOpenWeatherMapBackground: " + responseCode.format("%.0f"));
+function onReceiveQWeatherMapBackground(responseCode, data) {
+	//$.p("onReceiveQWeatherMapBackground: " + responseCode.format("%.0f"));
 	Bg.exit($.openWeatherMapData(responseCode, data));
 }
 

@@ -1,25 +1,37 @@
 <resources>
     <properties>
-    	<property id="api_key" type="string"></property>
+    	<property id="version" type="string">0.1</property>
+    	<property id="api_key" type="string">a361e4c29b06bb2ffd85f8f9ae340f5d</property>
     	<property id="refresh_rate" type="number">0</property>
     	<property id="use_garmin_location" type="boolean">true</property>
     	<property id="speed_units" type="number">0</property>
     	<property id="pres_units" type="number">0</property>
-    	<property id="units" type="string">Set in Watch settings</property>
+    	<property id="units" type="string">在手表上设置</property>
+    	<property id="ad" type="string">如果你需要购买最新的佳明手表以及周边设备，欢迎光顾</property>
     </properties>
 
     <settings>
-        <setting propertyKey="@Properties.api_key" title="@Strings.APIKeyTitle" ><settingConfig type="alphaNumeric"/></setting>
+
+        <setting propertyKey="@Properties.version" title="@Strings.AppName" >
+            <settingConfig type="alphaNumeric" readonly="true" />
+        </setting>
+        <setting propertyKey="@Properties.ad" title="@Strings.Ad" >
+            <settingConfig type="alphaNumeric" readonly="true" />
+        </setting>
+
+        <setting propertyKey="@Properties.api_key" title="@Strings.APIKeyTitle" >
+            <settingConfig type="alphaNumeric"/>
+        </setting>
 
         <setting propertyKey="@Properties.refresh_rate" title="@Strings.RefreshRateTitle">
             <settingConfig type="list">
-            <listEntry value="0">@Strings.m0</listEntry>
-            <listEntry value="15">@Strings.m15</listEntry>
-            <listEntry value="30">@Strings.m30</listEntry>
-            <listEntry value="60">@Strings.m60</listEntry>
-            <listEntry value="120">@Strings.m120</listEntry>
-            <listEntry value="180">@Strings.m180</listEntry>
-            <listEntry value="240">@Strings.m240</listEntry>
+                <listEntry value="0">@Strings.m0</listEntry>
+                <listEntry value="15">@Strings.m15</listEntry>
+                <listEntry value="30">@Strings.m30</listEntry>
+                <listEntry value="60">@Strings.m60</listEntry>
+                <listEntry value="120">@Strings.m120</listEntry>
+                <listEntry value="180">@Strings.m180</listEntry>
+                <listEntry value="240">@Strings.m240</listEntry>
             </settingConfig>
 		</setting>
 

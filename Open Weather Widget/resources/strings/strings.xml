@@ -1,46 +1,47 @@
 <strings>
-    <string id="AppName">Open Weather</string>
+    <string id="AppName">天气小组件</string>
+    <string id="Ad">淘宝店铺已经上线：牛拉松运动产品</string>
 	<string id="AppVersion">10</string>
 
-    <string id="m0">Never, refresh on the app start only</string>
-    <string id="m15">15 min</string>
-    <string id="m30">30 min</string>
-    <string id="m60">1 hour</string>
-    <string id="m120">2 hours</string>
-    <string id="m180">3 hours</string>
-    <string id="m240">4 hours</string>
+    <string id="m0">从不,只在应用启动时更新数据</string>
+    <string id="m15">15 分钟</string>
+    <string id="m30">30 分钟</string>
+    <string id="m60">1 小时</string>
+    <string id="m120">2 小时</string>
+    <string id="m180">3 小时</string>
+    <string id="m240">4 小时</string>
 
-    <string id="APIKeyTitle">Open Weather Map API key</string>
-    <string id="RefreshRateTitle">Weather refresh interval</string>
-    <string id="UseGarminLocationTitle">Use phone location provided by Garmin Weather (if available)</string>
-    <string id="SpeedUnitsTitle">Speed units</string>
-    <string id="UnitsTitle">Temperature units</string>
+    <string id="APIKeyTitle">和风天气 API key(参考视频https://www.bilibili.com/video/BV1XQ4y1v7wS自行申请，全程完全免费)</string>
+    <string id="RefreshRateTitle">天气刷新间隔</string>
+    <string id="UseGarminLocationTitle">使用佳明天气提供的手机位置（如果可用）</string>
+    <string id="SpeedUnitsTitle">速度单位</string>
+    <string id="UnitsTitle">温度单位</string>
 
-    <string id="SystemSpeed">System (Pace/Speed)</string>
-    <string id="kmh">KM/H</string>
-    <string id="mph">MPH</string>
-    <string id="kts">Knots</string>
-    <string id="mps">Meters/Sec</string>
-    <string id="bft">Beaufort</string>
+    <string id="SystemSpeed">跟随系统 (配速/速度)</string>
+    <string id="kmh">千米/小时</string>
+    <string id="mph">迈（英里/小时）</string>
+    <string id="kts">节</string>
+    <string id="mps">米/秒</string>
+    <string id="bft">蒲福风级（Beaufort scale）</string>
 
-	<string id="PressureUnitsTitle">Pressure Units</string>
-	<string id="hPa">hPa</string>
-	<string id="inHG">inHG</string>
-	<string id="mmHG">mmHG</string>
+	<string id="PressureUnitsTitle">压力单位</string>
+	<string id="hPa">百帕（hPa）</string>
+	<string id="inHG">英寸水银（inHG）</string>
+	<string id="mmHG">毫米水银（mmHG）</string>
 
-    <string id="NoLocation">No location.\nPress MENU button\n to use GPS.</string>
-    <string id="WaitForGPS">Waiting for\nGPS signal. Please\n stay on this\n screen...</string>
+    <string id="NoLocation">无定位.\n按下菜单键以\n使用GPS进行定位.</string>
+    <string id="WaitForGPS">等待\nGPS信号中。请\n 停留在当前屏幕...</string>
     
-    <string id="NoData">Waiting for data...</string>
-    <string id="InvalidData">Invalid OWM Data</string>
-    <string id="InvalidKey">Invalid OWM API key</string>
-    <string id="InvalidLocation">Invalid Location</string>
-    <string id="SuspendedKey">Suspended OWM\nAPI key</string>
-    <string id="OWMerror">OWM Error:</string>
-    <string id="NoAPIkey">Please set Open\nWeather API key in\nsettings.</string>
+    <string id="NoData">获取数据中...</string>
+    <string id="InvalidData">天气数据异常</string>
+    <string id="InvalidKey">和风天气API key异常</string>
+    <string id="InvalidLocation">位置异常</string>
+    <string id="SuspendedKey">API key异常使用\n已被吊销</string>
+    <string id="OWMerror">和风天气异常:</string>
+    <string id="NoAPIkey">请在Connect IQ中\n设置天气 \nAPI key</string>
 
-    <string id="RefreshWeather">Request Weather refresh</string>
-    <string id="GetGPSlocation">Get location from GPS</string>
-	<string id="AppVersionTitle">App Version</string>
+    <string id="RefreshWeather">请求更新天气数据</string>
+    <string id="GetGPSlocation">从GPS获取位置</string>
+	<string id="AppVersionTitle">软件版本</string>
 </strings>
 

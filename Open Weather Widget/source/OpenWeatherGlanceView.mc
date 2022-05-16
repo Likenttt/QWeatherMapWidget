@@ -12,6 +12,8 @@ class OpenWeatherGlanceView extends Ui.GlanceView {
 	var tempCelsius = true;
 
 	const DEGREE_SYMBOL = "\u00B0";
+	const C_SYMBOL = "\u2103";
+	const F_SYMBOL = "\u2109";
 	
     function initialize() {
     	//p("GlanceView initialize");
@@ -37,21 +39,25 @@ class OpenWeatherGlanceView extends Ui.GlanceView {
         dc.setColor(G.COLOR_WHITE, -1);
         dc.setPenWidth(1);
         dc.drawLine(0, GH /2, GW, GH/2);
-        dc.drawText(0, GH/4, G.FONT_SYSTEM_TINY, "Open Weather", G.TEXT_JUSTIFY_LEFT | G.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(0, GH/4, G.FONT_SYSTEM_TINY, "天气", G.TEXT_JUSTIFY_LEFT | G.TEXT_JUSTIFY_VCENTER);
         // Retrieve weather data
         var weatherData = App.Storage.getValue("weather");
         var str = "-";
 
         var apiKey = App.Properties.getValue("api_key");
-		if (apiKey == null || apiKey.length() == 0) {str = "No API key";}
-        else if (App.Storage.getValue("last_location") == null) {str = "No Location";}
+		if (apiKey == null || apiKey.length() == 0) {
+            str = "缺少 API key, 请在自行申请\n 或在公众号李二牛 \n中自行领取";
+        }
+        else if (App.Storage.getValue("last_location") == null) {
+            str = "缺少定位信息";
+        }
         
         if (weatherData != null && weatherData[0] == 401) {str = "Invalid API key";}
 
         if (weatherData != null && weatherData[0] == 200 && weatherData.size() > 16) {
 			if (weatherData[10] == null) {weatherData[10] = 0;}
 
-        	str = (tempCelsius ? weatherData[10].format("%.0f") : celsius2fahrenheit(weatherData[10]).format("%.0f")) + DEGREE_SYMBOL + (tempCelsius ? "C" : "F");
+        	str = (tempCelsius ? weatherData[10].format("%.0f") : celsius2fahrenheit(weatherData[10]).format("%.0f")) + (tempCelsius ? C_SYMBOL: F_SYMBOL);
         	str += ": " + capitalize(weatherData[3]);
         }
         

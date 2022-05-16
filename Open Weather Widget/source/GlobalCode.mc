@@ -58,6 +58,8 @@ function windDegreeToName (windDegree) {
 }
 
 const DEGREE_SYMBOL = "\u00B0";
+const C_SYMBOL = "\u2103";
+const F_SYMBOL = "\u2109";
 
 (:background)
 function p(p) {Sys.println(p);}
